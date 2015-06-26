@@ -10,4 +10,6 @@
 
 @interface FacebookStyleBar : BLKFlexibleHeightBar
 
+- (void)configureBar;
+
 @end

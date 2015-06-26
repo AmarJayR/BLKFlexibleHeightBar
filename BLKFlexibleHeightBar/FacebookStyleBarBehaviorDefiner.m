@@ -42,6 +42,7 @@
         _thresholdPositiveDirection = 0.0;
         
         self.elasticMaximumHeightAtTop = NO;
+        
     }
     
     return self;

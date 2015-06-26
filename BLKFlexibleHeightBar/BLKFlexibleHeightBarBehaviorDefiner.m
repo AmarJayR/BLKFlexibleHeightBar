@@ -91,11 +91,10 @@
 
 - (void)snapToProgress:(CGFloat)progress scrollView:(UIScrollView *)scrollView
 {
-    CGFloat deltaProgress = progress - self.flexibleHeightBar.progress;
-    CGFloat deltaYOffset = (self.flexibleHeightBar.maximumBarHeight-self.flexibleHeightBar.minimumBarHeight) * deltaProgress;
-    scrollView.contentOffset = CGPointMake(scrollView.contentOffset.x, scrollView.contentOffset.y+deltaYOffset);
-    
     self.flexibleHeightBar.progress = progress;
+    
+    self.topConstraint.constant = (-1 * (self.flexibleHeightBar.progress * (self.flexibleHeightBar.maximumBarHeight - self.flexibleHeightBar.minimumBarHeight)));
+    
     [self.flexibleHeightBar setNeedsLayout];
     [self.flexibleHeightBar layoutIfNeeded];
     
@@ -120,12 +119,19 @@
             {
                 NSNumber *existingProgressValue = obj;
                 snapPosition = [existingProgressValue doubleValue];
+                
+                [UIView animateWithDuration:0.30 animations:^{
+                    self.topConstraint.constant = (-1 * (1.0 * (self.flexibleHeightBar.maximumBarHeight - self.flexibleHeightBar.minimumBarHeight)));
+                }];
+                
+                NSLog(@"GOT HERE");
             }
             
         }];
         
         if(snapPosition != MAXFLOAT)
         {
+            
             [UIView animateWithDuration:0.15 animations:^{
                 
                 [self snapToProgress:snapPosition scrollView:scrollView];
@@ -160,8 +166,8 @@
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    scrollView.scrollIndicatorInsets =  UIEdgeInsetsMake(CGRectGetHeight(self.flexibleHeightBar.bounds), scrollView.scrollIndicatorInsets.left, scrollView.scrollIndicatorInsets.bottom, scrollView.scrollIndicatorInsets.right);
+{    
+    self.topConstraint.constant = (-1 * (self.flexibleHeightBar.progress * (self.flexibleHeightBar.maximumBarHeight - self.flexibleHeightBar.minimumBarHeight)));
 }
 
 @end

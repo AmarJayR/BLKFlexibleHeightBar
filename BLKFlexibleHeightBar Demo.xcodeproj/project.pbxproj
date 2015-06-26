@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		099E82AD1B3CC63C00168F6E /* TopBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 099E82AC1B3CC63C00168F6E /* TopBarViewController.m */; };
 		930EBF891A84AB4B00A67CCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 930EBF881A84AB4B00A67CCA /* main.m */; };
 		930EBF8C1A84AB4B00A67CCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 930EBF8B1A84AB4B00A67CCA /* AppDelegate.m */; };
 		930EBF8F1A84AB4B00A67CCA /* DemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930EBF8E1A84AB4B00A67CCA /* DemoViewController.m */; };
@@ -42,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		099E82AB1B3CC63C00168F6E /* TopBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TopBarViewController.h; sourceTree = "<group>"; };
+		099E82AC1B3CC63C00168F6E /* TopBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TopBarViewController.m; sourceTree = "<group>"; };
 		930EBF831A84AB4B00A67CCA /* BLKFlexibleHeightBar Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BLKFlexibleHeightBar Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		930EBF871A84AB4B00A67CCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		930EBF881A84AB4B00A67CCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				930EBF931A84AB4B00A67CCA /* Images.xcassets */,
 				930EBF951A84AB4B00A67CCA /* LaunchScreen.xib */,
 				930EBF861A84AB4B00A67CCA /* Supporting Files */,
+				099E82AB1B3CC63C00168F6E /* TopBarViewController.h */,
+				099E82AC1B3CC63C00168F6E /* TopBarViewController.m */,
 			);
 			path = "BLKFlexibleHeightBar Demo";
 			sourceTree = "<group>";
@@ -246,7 +251,7 @@
 		930EBF7B1A84AB4B00A67CCA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Bryan Keller";
 				TargetAttributes = {
 					930EBF821A84AB4B00A67CCA = {
@@ -307,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				930EBF8F1A84AB4B00A67CCA /* DemoViewController.m in Sources */,
+				099E82AD1B3CC63C00168F6E /* TopBarViewController.m in Sources */,
 				930EBF8C1A84AB4B00A67CCA /* AppDelegate.m in Sources */,
 				9353CB231AABB76C003E134E /* FacebookStyleViewController.m in Sources */,
 				930EBF891A84AB4B00A67CCA /* main.m in Sources */,
@@ -381,6 +387,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -445,6 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "BLKFlexibleHeightBar Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bryankeller.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -455,6 +463,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "BLKFlexibleHeightBar Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bryankeller.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -473,6 +482,7 @@
 				);
 				INFOPLIST_FILE = "BLKFlexibleHeightBar DemoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bryankeller.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLKFlexibleHeightBar Demo.app/BLKFlexibleHeightBar Demo";
 			};
@@ -488,6 +498,7 @@
 				);
 				INFOPLIST_FILE = "BLKFlexibleHeightBar DemoTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bryankeller.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BLKFlexibleHeightBar Demo.app/BLKFlexibleHeightBar Demo";
 			};

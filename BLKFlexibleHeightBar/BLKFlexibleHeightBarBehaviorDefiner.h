@@ -29,6 +29,9 @@
 
 @interface BLKFlexibleHeightBarBehaviorDefiner : NSObject <UIScrollViewDelegate>
 
+@property (nonatomic, strong) NSLayoutConstraint* topConstraint;
+
+
 /**
  The `BLKFlexibleHeightBar` instance corresponding with the behavior definer.
  */
